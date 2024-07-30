@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Name and Generate Image</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="container">
+        <h1 class="title">Create Your Custom Name Image</h1>
+        <div class="controls">
+            <input type="text" id="nameInput" placeholder="Type your name here" oninput="drawName()">
+            <select id="bgSelect" onchange="drawName()">
+                <option value="transparent">Transparent</option>
+                <option value="white">White</option>
+                <option value="blue">Blue</option>
+                <option value="red">Red</option>
+            </select>
+            <button onclick="downloadImage()">Download Image</button>
+        </div>
+        <div id="canvasContainer">
+            <canvas id="nameCanvas"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
